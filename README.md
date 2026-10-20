@@ -1,4 +1,5 @@
 ---
+title: New project template
 status: active      # Options: active, waiting, paused, finished, cancelled, archived
 category: research  # Options: research, clinical, education, personal
 ---
