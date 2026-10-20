@@ -1,5 +1,5 @@
 ---
-status: active      # Options: active, waiting, paused, finished
+status: active      # Options: active, waiting, paused, finished, cancelled, archived
 category: research  # Options: research, clinical, education, personal
 ---
 
