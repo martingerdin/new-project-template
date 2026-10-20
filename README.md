@@ -1,3 +1,8 @@
+---
+status: active      # Options: active, waiting, paused, finished
+category: research  # Options: research, clinical, education, personal
+---
+
 <!-- TEMPLATE-ONLY: remove everything above the PROJECT README marker after initialization. -->
 # Using this template
 
