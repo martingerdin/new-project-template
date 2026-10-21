@@ -1,10 +1,11 @@
 ---
-title: New project template
+title: New project template # Replace with the project name
 status: active      # Options: active, waiting, paused, finished, cancelled, archived
 category: research  # Options: research, clinical, education, personal
+parent-project: # Name the parent project here
 ---
 
-<!-- TEMPLATE-ONLY: remove everything above the PROJECT README marker after initialization. -->
+<!-- TEMPLATE-ONLY: remove this marker, the "Using this template" section below it, and the PROJECT README marker after initialization. Keep the YAML header above — it is project metadata. -->
 # Using this template
 
 A minimal template for research and clinical quality-improvement projects, based on [Good Enough Practices in Scientific Computing](https://carpentries-lab.github.io/good-enough-practices/index.html).
@@ -15,35 +16,32 @@ A minimal template for research and clinical quality-improvement projects, based
 4. Remove this template section, the boundary marker below, and the setup note in `LICENSE`.
 
 <!-- PROJECT README: keep and adapt everything below. Remove this marker after initialization. -->
-# Name <!-- Replace with the project name. -->
 
-> Example: Improving discharge follow-up
-
-## Description
+# Description
 
 <!-- Short description of the project and its aim. -->
 
 > Example: Evaluate whether a discharge checklist improves follow-up within seven days for patients leaving the medical ward.
 
-## Team and contact
+# Team and contact
 
 <!-- Names, roles, and contact person. -->
 
 > Example: Alex Smith (clinical lead) and Sam Lee (analyst). Contact: alex.smith@example.org.
 
-## Data and approvals
+# Data and approvals
 
 <!-- Sources, approved access/storage, and relevant permissions. No sensitive information or credentials. -->
 
 > Example: Encounter and follow-up records are stored in approved institutional storage. Access is restricted to authorized team members. Ethics and data-access decisions are recorded in `doc/approvals/`. Patient-level data are kept out of version control.
 
-## Setup and workflow
+# Setup and workflow
 
 <!-- Specify required software/packages, environment setup, and commands to run the analysis and render manuscripts. -->
 
 > Example: Install R, Quarto, and the dependencies listed in `src/DESCRIPTION`. Once the project scripts and manuscript exist, run `Rscript src/run_analysis.R`, then `quarto render doc/manuscripts/report.qmd`.
 
-## Project layout
+# Project layout
 
 | Location | Contents |
 | --- | --- |
@@ -56,10 +54,11 @@ A minimal template for research and clinical quality-improvement projects, based
 | `results/` | Generated data, tables, and figures that are safe to store here. |
 | `src/` | Data-access, cleaning, and analysis code. |
 | `CITATION`, `LICENSE` | Citation instructions and reuse terms. |
+| `AGENTS.md` | Behavior rules for AI coding assistants working in this project. |
 
 Use document subfolders only when needed. Small projects can keep documents directly in `doc/`. Keep folder guidance in this README rather than separate folder READMEs.
 
-## Reusable R functions
+# Reusable R functions
 
 For functions shared across analyses or Quarto manuscripts, use a local R package in `src/`: metadata and dependencies in `src/DESCRIPTION`, functions in `src/R/`. Give the package a unique project-specific name. It need not be called `src` or published to CRAN.
 
@@ -73,13 +72,13 @@ In a Quarto setup chunk, use `pkgload::load_all("../../src")` for a document in 
 
 For installed use, run `devtools::install("src")`, then `library(yourPackageName)`. Add tests in `src/tests/testthat/` as needed. For a few one-off helpers, use `source()` with the path to the file.
 
-## Working practices
+# Working practices
 
 - Keep raw data unchanged in approved storage. Record where the data came from, how to access them, and how they were changed.
 - Never commit sensitive data or credentials. Avoid committing large or easily regenerated outputs.
 - Use descriptive filenames and `YYYY-MM-DD` dates. Make analyses scriptable and test important steps.
 - Track changes in version control and back up through approved locations.
 
-## Licensing
+# Licensing
 
 See [`LICENSE`](LICENSE) for the terms. MIT applies to code and project documentation. CC BY 4.0 applies to manuscript/publication prose and original figures, excluding executable code. Datasets are excluded. Third-party terms remain unchanged. Record exceptions and approved data-sharing terms there, and identify publication figures stored in `results/` if they should use CC BY. An open license does not give permission to share sensitive data.
