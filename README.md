@@ -46,7 +46,7 @@ A minimal template for research and clinical quality-improvement projects, based
 | Location | Contents |
 | --- | --- |
 | `data/` | Non-sensitive metadata: data dictionaries, code lists, and schemas. |
-| `doc/notebook.md` | Dated decisions, methods, and analysis notes. |
+| `doc/notebook.qmd` | Running log of decisions, next steps, and analysis notes. |
 | `doc/project-planning/` | Concept notes and proposals. |
 | `doc/approvals/` | Ethics, consent, data-access, and other permissions. |
 | `doc/protocols/` | Protocols, analysis plans, and procedures. |

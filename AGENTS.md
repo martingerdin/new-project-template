@@ -58,7 +58,7 @@ Complete these steps in order:
 4. **Update `CITATION`**: replace the example with the actual author(s), year, and title. If the repository URL or DOI is unknown, leave `[URL or DOI]` as a placeholder and tell the user what is missing, rather than inventing a value.
 5. **Update `LICENSE`**: replace `YEAR` and `AUTHOR OR ORGANISATION` and remove the "Template setup note (remove after initialization)" section. Licensing decisions need a human: if the user has not confirmed the license, flag in your summary that the rights holders must confirm, rather than guessing.
 6. **Remove template-only content**: from `README.md`, remove the "Using this template" section and the `TEMPLATE-ONLY` / `PROJECT README` marker comments. **Do not remove the YAML header.** (The `LICENSE` setup note is handled in step 5.)
-7. **Fill in `doc/notebook.qmd`**: complete the Aim, Context, Data, and Methods sections and start the log. Keep the file.
+7. **Start the log in `doc/notebook.qmd`**: replace the placeholder entry with a first dated entry of decisions and next steps. Project details (description, data, methods) live in `README.md`, not the notebook — do not duplicate them. Keep the file.
 8. **Resolve folders**: apply rule 2 to every folder that stays empty before finalizing. Update the "Project layout" table accordingly.
 9. **Drop `.gitkeep` files** once their folder has content.
 
