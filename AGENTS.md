@@ -12,7 +12,7 @@ Instructions for AI coding assistants ("agents") working with this repository. T
 ---
 title: New project template # Replace with the project name
 status: active      # Options: active, waiting, paused, finished, cancelled, archived
-category: research  # Options: research, clinical, education, personal
+category: research  # Options: research, clinical, education, personal, tooling
 parent-project: # Name the parent project here
 ---
 ```
