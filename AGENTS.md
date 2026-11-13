@@ -67,6 +67,26 @@ Do not use semicolons to join or split sentences in any prose written for this p
 
 When writing or revising prose for this project, check the wording against https://claudisms.ai/ and remove phrases and patterns that signal AI authorship.
 
+### 9. Follow the coding conventions
+
+These instructions apply when writing or reviewing code. Keep them in initialized projects even if the README's coding summary is removed. This section is self-contained and does not depend on README headings.
+
+#### Functions, duplication, and names
+
+Follow these Good Enough Practices:
+
+- [Decompose programs into functions](https://carpentries-lab.github.io/good-enough-practices/03-software.html#decompose-programs-into-functions). Give each function one main task and clearly defined inputs and outputs. Pass inputs as arguments rather than relying on global state. Aim for functions that fit on one screen (about 60 lines) and take no more than five or six arguments. Treat these as prompts to consider decomposition, not rigid limits.
+- [Eliminate duplication](https://carpentries-lab.github.io/good-enough-practices/03-software.html#be-ruthless-about-eliminating-duplication). Extract repeated logic into reusable functions instead of copying and pasting code. Group related values in vectors, lists, or data frames rather than creating variables such as `score1`, `score2`, and `score3`. Look for well-maintained libraries before reimplementing functionality, and test their relevant behaviour before relying on them.
+- [Give functions and variables meaningful names](https://carpentries-lab.github.io/good-enough-practices/03-software.html#give-functions-and-variables-meaningful-names). Choose concise names that describe purpose or content. Avoid vague names such as `process_data` when a more specific name is possible, and avoid cryptic abbreviations. Short loop counters such as `i` are acceptable in a small scope. Objects used widely need more informative names.
+
+#### R
+
+- **Keep dependencies minimal.** Prefer base R when it provides a clear solution. Add a package only when it offers a meaningful benefit over existing tools, rather than loading a broad package collection for a single helper. Declare required packages in `src/DESCRIPTION` when using a local package, or document them in the project's setup instructions otherwise.
+- **Use native pipes.** Write `|>` rather than `%>%`. Native pipes require R 4.1 or later. Ensure setup instructions reflect that requirement when pipes are used.
+- **Use `gtsummary` for summary and statistical tables.** Do not introduce a competing table-summary package without a project-specific reason.
+- **Use `ggplot2` for plots.** Do not introduce a competing plotting framework without a project-specific reason.
+- Keep reusable analysis logic in functions with explicit arguments so it can be tested and called from scripts or Quarto documents without duplicating it.
+
 ## Setting up a new project
 
 Complete these steps in order:

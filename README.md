@@ -58,6 +58,10 @@ A minimal template for research and clinical quality-improvement projects, based
 
 Use document subfolders only when needed. Small projects can keep documents directly in `doc/`. Keep folder guidance in this README rather than separate folder READMEs.
 
+# Coding conventions
+
+Write short, single-purpose functions, avoid duplicated code, and use meaningful names. Follow [Good Enough Practices in Scientific Computing](https://carpentries-lab.github.io/good-enough-practices/).
+
 # Reusable R functions
 
 For functions shared across analyses or Quarto manuscripts, use a local R package in `src/`: metadata and dependencies in `src/DESCRIPTION`, functions in `src/R/`. Give the package a unique project-specific name. It need not be called `src` or published to CRAN.
